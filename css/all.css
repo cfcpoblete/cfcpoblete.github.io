@@ -951,7 +951,7 @@ margin: 6px -2px 0 -2px;
 
 .caption h1 span { color: #f7941d; }
 .caption-holder {
-	display: table-cell;
+	margin-top: 8em;
 	padding: 23px 0 0;
 	vertical-align: middle;
 }
