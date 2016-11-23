@@ -1,0 +1,241 @@
+<!--#include file="includes/settings.asp"-->    
+<!--#include file="includes/basUtil.asp"-->
+<!--#include file="includes/databasefunctions.asp"-->
+<!--#include file="includes/validateform.asp" --> 
+<% validateForm "quotation_AddExec.asp" %> 
+<!--#include file="header.asp" -->
+<!--#include file="includes/quotation.js"-->
+  <tr>
+    <td align="left" valign="middle" bgcolor="#3366CC"><table width="1024" border="0" cellspacing="5" cellpadding="0">
+      <tr>
+        <td valign="top"><p align="justify" class="ReadMoreLink"><a href="javascript:history.back()">&lt;&lt; Back</a></p>
+        <p align="justify" class="BigLinkAOrange">Quotation Request Form</p>
+<form method="post" name="quotationform" action="quotation_AddExec.asp">
+      <table width="720" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+	    <td width="260" align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Please fill in the form below</span></td>
+	    <td width="460">&nbsp;</td>
+	    </tr>
+        <tr>
+	    <td align="left" valign="middle">&nbsp;</td>
+	    <td>&nbsp;</td>
+	    </tr>
+        <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Name of Company*</span></td>
+	    <td><input name="txtCompany" type="text" class="TextField" id="txtCompany" size="70" maxlength="200" /></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Contact Person*</span></td>
+	    <td><input name="txtContactPerson" type="text" class="TextField" id="txtContactPerson" size="70" maxlength="200" /></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Email*</span></td>
+	    <td><input name="txtEmail" type="text" class="TextField" id="txtEmail" size="70" maxlength="200" /></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Tel/Mobile</span></td>
+	    <td><input name="txtTel" type="text" class="TextField" id="txtTel" size="70" maxlength="200" /></td>
+	    </tr>
+      <tr>
+	    <td align="left" valign="top">&nbsp;&nbsp;&nbsp;<span class="TextA">Comments</span></td>
+	    <td><textarea name="txtComments" cols="53" rows="5" wrap="VIRTUAL" id="txtComments"></textarea></td>
+	    </tr>
+	  <tr>
+      <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	    <td>&nbsp;</td>
+	    </tr>
+	  <tr>
+	    <td width="260" align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Vessel Name</span></td>
+	    <td><input name="txtVesselName" type="text" class="TextField" id="txtVesselName" size="70" maxlength="200" /></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Vessel Type </span></td>
+	    <td><input name="txtVesselType" type="text" class="TextField" id="txtVesselType" size="70" maxlength="200" /></td>
+	    </tr>
+      <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	    <td>&nbsp;</td>
+	    </tr>  
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Number of Safe Manning Requirement</span></td>
+	    <td><input name="txtCrewCompliment" type="text" class="TextField" id="txtCrewCompliment" size="70" maxlength="200" /></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Additional Crew Compliment</span></td>
+	    <td><input name="txtAddlCrewCompliment" type="text" class="TextField" id="txtAddlCrewCompliment" size="70" maxlength="200" /></td>
+	    </tr>
+        <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	    <td>&nbsp;</td>
+	    </tr>
+       <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Area of Operation</span></td>
+	    <td><input name="txtAreaOperation" type="text" class="TextField" id="txtAreaOperation" size="70" maxlength="200" /></td>
+	    </tr>
+        <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	    <td>&nbsp;</td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Special Training/course Requirements </span></td>
+	    <td>&nbsp;</td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">a. HUET</span></td>
+	    <td><label><input name="chkHuet" type="checkbox" id="chkHuet" value="chkHuet"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">b. BOSIET</span></td>
+	    <td><label><input name="chkBosiet" type="checkbox" id="chkBosiet" value="chkBosiet"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+       <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">c. Rigging and Slinging Course</span></td>
+	    <td><label><input name="chkRigging" type="checkbox" id="chkRigging" value="chkRigging"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">d. Banksman </span></td>
+	    <td><label><input name="chkBanksman" type="checkbox" id="chkBanksman" value="chkBanksman"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">e. Crane Operator Course</span></td>
+	    <td><label><input name="chkCraneOperator" type="checkbox" id="chkCraneOperator" value="chkCraneOperator"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">f. H2S Awareness Course</span></td>
+	    <td><label><input name="chkH2SAwareness" type="checkbox" id="chkH2SAwareness" value="chkH2SAwareness"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+        <tr>
+	    <td align="left" valign="top">&nbsp;&nbsp;&nbsp;<span class="TextA">g. Others</span></td>
+	    <td><textarea name="txtOtherCert" cols="53" rows="5" wrap="virtual" id="txtOtherCert"></textarea></td>
+	    </tr>
+       <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	    <td>&nbsp;</td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Oil Majors Charterer guidelines</span></td>
+	    <td>&nbsp;</td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">a. Brunei Shell</span></td>
+	    <td><label><input name="chkBrunei" type="checkbox" id="chkBrunei" value="chkBrunei"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">b. Sarawak Shell</span></td>
+	    <td><label><input name="chkSarawak" type="checkbox" id="chkSarawak" value="chkSarawak"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+        <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">c. Petronas Carigali</span></td>
+	    <td><label><input name="chkPetronas" type="checkbox" id="chkPetronas" value="chkPetronas"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">d. Exxon Mobil </span></td>
+	    <td><label><input name="chkExxon" type="checkbox" id="chkExxon" value="chkExxon"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">e. Total</span></td>
+	    <td><label><input name="chkTotal" type="checkbox" id="chkTotal" value="chkTotal"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">f. Talisman Energy</span></td>
+	    <td><label><input name="chkTalisman" type="checkbox" id="chkTalisman" value="chkTalisman"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="top">&nbsp;&nbsp;&nbsp;<span class="TextA">g. Others</span></td>
+	    <td><textarea name="txtOtherOil" cols="53" rows="5" wrap="VIRTUAL" id="txtOtherOil"></textarea></td>
+	    </tr>
+        <tr>
+          <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;</td>
+          </tr>
+       <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Vessel Activity</span></td>
+	    <td>&nbsp;</td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">a. 3 &ndash; 6 months project</span></td>
+	    <td><label><input name="chk3to6months" type="checkbox" id="chk3to6months" value="chk3to6months"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">b. Vessel Delivery/Ship Commissioning</span></td>
+	    <td><label><input name="chkVesselDelivery" type="checkbox" id="chkVesselDelivery" value="chkVesselDelivery"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+       <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">c. 12 months and above project </span></td>
+	    <td><label><input name="chk12months" type="checkbox" id="chk12months" value="chk12months"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+        <tr>
+          <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;</td>
+          </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">Nationality of Seafarer Preferences</span></td>
+	    <td>&nbsp;</td>
+	    </tr>
+	  <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">a. Asian crews</span></td>
+	    <td><label><input name="chkAsian" type="checkbox" id="chkAsian" value="chkAsian"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+      <tr>
+	    <td align="left" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="TextA">Asian Nationality</span></td>
+	    <td><textarea name="txtAsianNationality" cols="53" rows="5" wrap="virtual" id="txtAsianNationality"></textarea></td>
+	    </tr>
+       <tr>
+	    <td align="left" valign="middle">&nbsp;&nbsp;&nbsp;<span class="TextA">b. European crews</span></td>
+	    <td><label><input name="chkEuropean" type="checkbox" id="chkEuropean" value="chkEuropean"/>
+	      <span class="TextA">Yes</span></label></td>
+	    </tr>
+       <tr>
+	    <td align="left" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="TextA">European Nationality</span></td>
+	    <td><textarea name="txtEuropeanNationality" cols="53" rows="5" wrap="virtual" id="txtEuropeanNationality"></textarea></td>
+	    </tr>
+	  <tr>
+	    <td>&nbsp;</td>
+	    <td><input type="submit" name="cmdSave" value="Submit" onClick="return validate_quotationform()" />
+&nbsp;
+<input type="reset" name="cmdCancelSave" value="Reset"/>
+<input name="txtCancel" type="hidden" /></td>
+	    </tr>
+	  <tr>
+	    <td>&nbsp;</td>
+	    <td class="TextA"><p>Note:</p>
+	      * Mandatory fields</td>
+	    </tr>
+    </table>
+    </form>
+         <p align="justify" class="ReadMoreLink"><a href="javascript:history.back()">&lt;&lt; Back</a></p></td>
+        <td width="10" bgcolor="#3366CC">&nbsp;</td>
+        <td width="1" bgcolor="#FFFFFF">&nbsp;</td>
+        <td width="250" align="right" valign="top"><!--#include file="login.asp" --><br />
+        <table width="250" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" valign="top" class="MediumLinkABlack">LATEST NEWS</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <!--#include file="latestnews.asp" -->
+        </table></td>
+      </tr>
+    </table>
+    
+    </td>
+  </tr>
+<!--#include file="footer.asp" -->
