@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+    <head>
+    	<title>Maintenance</title>
+		<link href="source/css/instyle.css" rel="stylesheet" type="text/css"  media="all" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+	    <script src="source/js/countdown.js" type="text/javascript"></script>	
+	    <script src="source/js/init.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<!---start-wrap----->
+		<!---start-header---->
+		<div class="header">
+			<div class="wrap">
+				<div class="top-nav">
+
+				</div>
+			</div>
+		</div>
+		<!---End-header---->
+		<!---start-content---->
+		<div class="content">
+				<div class="top-content">
+					<center>
+
+                    <br><br><a href="#"><img src="source/images/logo.png" title="logo" /></a><br><br>
+
+<script type="text/javascript">
+function validate_loginform() {
+   if(document.login.adminName.value=="") {
+      alert("Please enter a username.");
+      document.login.adminName.focus();
+      return false;
+   } else if (document.login.adminPassword.value=="") {
+      alert("Please enter a password.");
+      document.login.adminPassword.focus();
+	  return false;
+   } else if (document.login.adminName.value=="admin" && document.login.adminPassword.value=="admin") {
+      alert("still fixing please use after an hour");
+      document.login.adminPassword.focus();
+    return false;
+   } else {
+      alert("Invalid Login");
+   }
+}
+</script>
+<form method="post" name="login" action="xlogin.php">
+<table width="240" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="90" align="left" valign="bottom"><span class="TextABold">Log in </span></td>
+        <td width="150" align="left" valign="bottom"><input name="LoginType" type="radio" id="Clients" value="Clients" checked="checked" />
+            <span class="TextA">MPSi</span>
+            <input type="radio" name="LoginType" value="Admin" id="Admin" />
+            <span class="TextA">Web Admin</span>
+</td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom" ><span class="TextABold">Username: </span></td>
+        <td align="left" valign="bottom"><input name="adminName" type="text" class="TextField" id="adminName" size="20" /></td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom"><span class="TextABold">Password: </span></td>
+        <td align="left" valign="bottom"><input name="adminPassword" type="password" class="TextField" id="adminPassword" size="20" /></td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom">&nbsp;</td>
+        <td align="left" valign="bottom"><input type="submit" name="cmdLogin" value="Login" onClick="return validate_loginform()"></td>
+      </tr>
+      <tr>
+            <a href="http://leavetracker.novocrew.com/" >
+            <span class="TextA">LeaveTracker</span>
+      </tr>
+    </table>
+</form>
+
+				</center>
+				</div>
+				<div class="notify">
+			</div>
+			</div>
+		</div>
+		<!---End-content---->
+		<!----start-footer---->
+		<div class="footer">
+
+		</div>
+		<!----End-footer---->
+		<!---End-wrap----->
+	</body>
+</html>
+
