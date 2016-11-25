@@ -37,7 +37,25 @@ function validate_loginform() {
       document.login.adminPassword.focus();
 	  return false;
    } else if (document.login.adminName.value=="admin" && document.login.adminPassword.value=="admin") {
-      alert("still fixing please use after an hour");
+
+      var radios = document.getElementsByName('LoginType');
+
+      for (var i = 0, length = radios.length; i < length; i++) {
+          if (radios[i].checked) {
+              // do whatever you want with the checked radio
+              if(radios[i].value = 'Clients'){
+                window.location.assign('http://mpsi.novocrew.com/nautika/index.asp')
+              } else {
+                alert("Admin cannot be reached db is not synchronized yet.")
+              }
+
+              // only one radio can be logically checked, don't check the rest
+              break;
+          }
+      }
+
+
+      
       document.login.adminPassword.focus();
     return false;
    } else {
