@@ -43,10 +43,10 @@ function validate_loginform() {
       for (var i = 0, length = radios.length; i < length; i++) {
           if (radios[i].checked) {
               // do whatever you want with the checked radio
-              if(radios[i].value = 'Clients'){
-                window.location.assign('http://mpsi.novocrew.com/nautika/index.asp')
+              if(radios[i].value == 'Clients'){
+                window.location.assign('http://mpsi.novocrew.com/nautika/index.asp');
               } else {
-                alert("Admin cannot be reached db is not synchronized yet.")
+                window.location.assign('https://docs.google.com/spreadsheets/d/1CObGLwWbGuIqDwBiLcehiYF8_zSj_odZjlrCyNrOyqg/edit?usp=sharing');
               }
 
               // only one radio can be logically checked, don't check the rest
