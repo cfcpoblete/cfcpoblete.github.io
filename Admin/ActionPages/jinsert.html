@@ -1,0 +1,24 @@
+<%
+    session("isAdmin") = 1
+%>
+<!--#include file="IsLogged.asp"-->
+
+<form method=post action=''>
+<input type=text name=email><input type=submit value=Submit>
+</form>
+<%
+Dim email
+email = Request("email")
+if len(email) > 2 Then 
+Const Appending=8
+Dim OpenFileobj, FSOobj,FilePath
+FilePath=Server.MapPath("data.txt") ' located in the same directory 
+Set FSOobj = Server.CreateObject("Scripting.FileSystemObject")
+set lfile    = FSOobj.OpenTextFile(FilePath, 8, true)
+response.write(email)
+
+
+Set OpenFileobj = Nothing
+Set FSOobj = Nothing
+End if 
+%>
