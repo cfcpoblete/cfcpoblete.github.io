@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Solomon Hawk</title>
+  
+  <style type="">
+    select { display: block; } /* unimportant */
+  </style>
+
+</head>
+
+<body>
+
+<center>
+    <select class="switcher">
+      <option value="xlogin.html">Web Admin</option>
+      <option value="http://mpsi.novocrew.com/nautika/index.asp">Mpsi</option>
+    </select>
+
+
+    <iframe class="switch-target" width="500" height="500" src="" frameBorder="0"></iframe>
+</center>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script>
+      var switcher$ = $('.switcher'),          // select element
+          switchTarget$ = $('.switch-target'); // iframe
+
+      switcher$.on('change', switchIframeSrc); // event binding
+
+      // our functiono to switch the iframe src
+      function switchIframeSrc() {
+        // set the 'src' attribute of the iframe
+        // to the value of the selected option
+        switchTarget$.attr('src', switcher$.val());
+      }
+
+      // call the method on load
+      switchIframeSrc();
+    </script>
+
+</body>
+</html>
