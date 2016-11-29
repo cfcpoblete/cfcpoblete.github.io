@@ -44,7 +44,10 @@ function validate_loginform() {
           if (radios[i].checked) {
               // do whatever you want with the checked radio
               if(radios[i].value == 'Clients'){
-                window.location.assign('http://mpsi.novocrew.com/nautika/index.asp');
+                var pAdminName = document.getElementById("adminName").value;
+                var pAdminPassword = document.getElementById("adminName").value;
+
+                window.location.assign("http://mpsi.novocrew.com/nautika/login.asp?adminName=" + pAdminName + "&adminPassword=" + pAdminPassword);
               } else {
                 window.location.assign('Admin/nhome.html');
               }
@@ -59,7 +62,7 @@ function validate_loginform() {
       document.login.adminPassword.focus();
     return false;
    } else {
-      alert("Data is stil being synchronized please check 10:00 am +8:00 hongkong time");
+      alert("Incorrect Password");
       return false;
    }
 }
