@@ -36,7 +36,7 @@ function validate_loginform() {
       alert("Please enter a password.");
       document.login.adminPassword.focus();
 	  return false;
-   } else if (document.login.adminName.value=="admin" && document.login.adminPassword.value=="admin") {
+   } else {
 
       var radios = document.getElementsByName('LoginType');
 
@@ -45,7 +45,7 @@ function validate_loginform() {
               // do whatever you want with the checked radio
               if(radios[i].value == 'Clients'){
                 var pAdminName = document.getElementById("adminName").value;
-                var pAdminPassword = document.getElementById("adminName").value;
+                var pAdminPassword = document.getElementById("adminPassword").value;
 
                 window.location.assign("http://mpsi.novocrew.com/nautika/login.asp?adminName=" + pAdminName + "&adminPassword=" + pAdminPassword);
               } else {
@@ -57,14 +57,9 @@ function validate_loginform() {
           }
       }
 
-
-      
       document.login.adminPassword.focus();
     return false;
-   } else {
-      alert("Incorrect Password");
-      return false;
-   }
+   } 
 }
 </script>
 <form method="post" name="login" action="xlogin.php">
