@@ -14,12 +14,12 @@
     <body>
          <p id="demo" onclick="myFunction()"></p>
         <script>
-            $.ajax("http://docs.google.com/spreadsheets/d/e/2PACX-1vSdvxM-4_FTd9S-sKiTkaiAPHqwzXFmV4uXWFSSWZRH_eCbK9fAPSPI-a0Mi9edE2rqTeVEORt8ih5G/pub?gid=1666722093&single=true&output=tsv").done(function(raw)
+            $.ajax("https://docs.google.com/spreadsheets/d/e/2PACX-1vSdvxM-4_FTd9S-sKiTkaiAPHqwzXFmV4uXWFSSWZRH_eCbK9fAPSPI-a0Mi9edE2rqTeVEORt8ih5G/pub?gid=0&single=true&output=tsv").done(function(raw)
             {
                 var result = raw.split("\n");
                 var subresult = "";
                 var data = "";
-                var table = "<table><tr><th>Timestamp</th><th>Name of Company</th><th>Contact Person</th><th>Email</th><th>Tel/Mobile</th><th>Comments</th><th>Vessel Name</th><th>Vessel Type</th><th>Number of Safe Manning Requirement</th><th>Additional Crew Compliment</th><th>Area of Operation</th><th>Additional Crew Compliment</th><th>Special Training/course Requirements</th><th>Oil Majors Charterer guidelines</th><th>Vessel Activity</th><th>a. Asian crews</th><th>b. European crews</th></tr>";
+                var table = "<table><tr><th>Submission Date</th><th>Position Applied</th><th>CLast Drawn Wages</th><th>Preferred date or time to call for interview</th><th>First Name</th><th>Middle Name</th><th>Last Name</th><th>Street</th><th>Street2</th><th>City</th><th>Province</th><th>Postal ID</th><th>Country</th><th>Email</th><th>Number</th><th>Travel Document Information</th><th>Competency Certificates</th></tr>";
 
                 for (i = 1; i < result.length; i++) 
                 { 
