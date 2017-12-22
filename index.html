@@ -19,30 +19,36 @@
 		.gantt .bar-milestone .bar-progress {
 			fill: tomato;
 		}
-	</style> 
+	</style>
 	<script src="https://momentjs.com/downloads/moment.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
 	<script src="dist/frappe-gantt.js"></script>
 </head>
 <body>
 	<div class="container">
-		<h2>Interactive Gantt Chart entirely made in SVG!</h2>
+		<h2>Poseidon Activity Gantt Chart</h2>
 		<div class="gantt-container">
 			<svg id="gantt" width="400" height="600"></svg>
 		</div>
 	</div>
 	<script>
 		var names = [
-			["Redesign website", [0, 7]],
-			["Write new content", [1, 4]],
-			["Apply new styles", [3, 6]],
-			["Review", [7, 7]],
-			["Deploy", [8, 9]],
-			["Go Live!", [10, 10]]
+			["Payroll UI", [0, 10]],
+			["Payroll Reports", [7, 17]],
+			["Create Crew UI", [21, 23]],
+			["Create Vessel UI", [23, 25]],
+			["User Management UI", [21, 39]],
+			["User Admin functionality", [29, 41]],
+			["Email Notifications", [36, 41]],
+			["LTP UI", [36, 50]],
+			["Crew Reports", [29, 34]],
+			["Other Reports", [34, 39]],
+			["Dashboard UI", [49, 54]],
+			["Testing and general Fixes", [49, 64]]
 		];
 
 		var tasks = names.map(function(name, i) {
-			var today = new Date();
+			var today = new Date("2017-11-27");
 			var start = new Date(today.getFullYear(), today.getMonth(), today.getDate());
 			var end = new Date(today.getFullYear(), today.getMonth(), today.getDate());
 			start.setDate(today.getDate() + name[1][0]);
